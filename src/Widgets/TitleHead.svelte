@@ -6,7 +6,7 @@
     <div class="settings-section1__block4 layout">
         <h1 class="settings-section1__big-title layout">{msg}</h1>
         <div
-            style="--src:url(https://cdn.discordapp.com/attachments/994907739857891338/1000907159028121700/arrow.png)"
+            style="--src:url(https://cdn.discordapp.com/attachments/995367294660255785/1001160698149208185/App_Icon.png?width=580&height=580)"
             class="settings-section1__image4 layout"
         />
     </div>
@@ -111,9 +111,9 @@
     }
     .settings-section1__image4.layout {
         position: absolute;
-        top: 9px;
-        height: 23px;
-        left: -77px;
+        top: -7px;
+        height: 150%;
+        left: -70px;
         width: 46px;
     }
 </style>
