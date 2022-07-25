@@ -2,7 +2,7 @@
 	import { onMount } from "svelte";
 	import Data from "./Lib/Data.svelte";
 	import Login from "./Lib/Login.svelte";
-	import { user, dbUser , tab} from "./stores";
+	import { user, dbUser, tab } from "./stores";
 	import Settings from "./Lib/Settings.svelte";
 	import Workers from "./Lib/Workers.svelte";
 	import Home from "./Lib/Home.svelte";
@@ -15,20 +15,22 @@
 
 {#if $dbUser}
 	<div>
-		{#if $tab=='home'}
+		{#if $tab == "home"}
 			<Home />
-		{:else if $tab=='data'}
+		{:else if $tab == "data"}
 			<Data />
-		{:else if $tab=='set'}
+		{:else if $tab == "set"}
 			<Settings />
-		{:else if $tab=='find'}
-			<Workers/>
+		{:else if $tab == "find"}
+			<Workers />
 		{/if}
-		<div class="empty"></div>
+		<div class="empty" />
 	</div>
 	<div class="nav">
 		<svg
-			on:click={()=>{$tab='home'}}
+			on:click={() => {
+				$tab = "home";
+			}}
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="-2 -2 24 24"
 			width="24"
@@ -38,7 +40,9 @@
 			/></svg
 		>
 		<svg
-			on:click={()=>{$tab='data'}}
+			on:click={() => {
+				$tab = "data";
+			}}
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="-5 -4 24 24"
 			width="24"
@@ -48,7 +52,9 @@
 			/></svg
 		>
 		<svg
-			on:click={()=>{$tab='find'}}
+			on:click={() => {
+				$tab = "find";
+			}}
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="-2 -2 24 24"
 			width="24"
@@ -58,7 +64,9 @@
 			/></svg
 		>
 		<svg
-			on:click={()=>{$tab='set'}}
+			on:click={() => {
+				$tab = "set";
+			}}
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="-2 -2 24 24"
 			width="24"
@@ -73,7 +81,7 @@
 {/if}
 
 <style>
-	.empty{
+	.empty {
 		height: 50px;
 	}
 	.nav {
@@ -82,7 +90,7 @@
 		align-items: center;
 		width: 100%;
 		height: 50px;
-		background-color: #141414;
+		background-color: #16161a;
 		position: fixed;
 		bottom: 0;
 		left: 0;
